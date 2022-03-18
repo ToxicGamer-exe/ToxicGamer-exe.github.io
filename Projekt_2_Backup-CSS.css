@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Smooch+Sans:wght@100&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 15pt;
+    /* margin-left: -0.25px;
+    margin-top: -0.25px; */
+}
+
+body {
+    width: calc(100vw - 17px);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    color: white;
+    text-align: right;
+    display: block;
+    overflow: hidden;
+    align-items: center;
+}
+
+header>p {
+    text-align: center;
+    font-size: 10pt;
+    position: absolute;
+    left: 1%;
+}
+
+.navLinks {
+    float: right;
+    margin-top: 20px;
+    margin-right: 1%;
+}
+
+header>p::first-line, .navLinks>a {
+    font-size: 20pt;
+    color: yellow
+}
+
+.navLinks>a {
+    /* position: absolute;
+        display: contents;     */
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.navLinks>a::before {
+    margin-right: 10px;
+    content: '|';
+}
+
+.navLinks>a:first-of-type::before {
+    content: '';
+}
+
+.navLinks>a::after {
+    content: '';
+    position: absolute;
+    bottom: 22%;
+    width: 40px;
+    margin-left: -39px;
+    height: 1%;
+    background-color: grey;
+    transition: transform 300ms;
+    transform: scale(0);
+    transform-origin: center;
+}
+
+.navLinks>a:hover::after {
+    transform: scale(1);
+}
+
+.navLinks>a:nth-of-type(2)::after {
+    width: 51.5px;
+    margin-left: -51.5px;
+}
+
+.navLinks>a:nth-of-type(3)::after {
+    width: 105px;
+    margin-left: -105px;
+}
+
+.navLinks>a:nth-of-type(4)::after {
+    width: 73px;
+    margin-left: -73px;
+}
+
+.navLinks>a:nth-of-type(5)::after {
+    width: 46px;
+    margin-left: -46px;
+}
+
+.intro {
+    /* background-image: url("/Images/intro.mp4"); */
+    text-align: center;
+    left: auto;
+    right: auto;
+    top: 300px;
+    position: relative;
+    color: white;
+    background-color: transparent;
+    font-size: 50pt;
+    font-weight: 700;
+}
+
+#introVid {
+    position: fixed;
+    /* min-width: 100%; */
+    /* min-height: 100%; */
+    /* width: 1600px; */
+    width: 100%;
+}
+
+.info-bg {
+    margin-top: 40%;
+    width: 100%;
+    /* background-color: black; */
+    background-image: url("../Projekt_1/Images/Binary_dark.jpg");
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: 100px 603px;
+    gap: 10px;
+    padding: 5px 0px;
+    justify-content: center;
+}
+
+.item {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid;
+    border-radius: 1em;
+    color: white;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 1% 5%;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 25pt;
+    color: yellow;
+}
+
+.item>img {
+    width: 50%;
+}
+
+.general-info {
+    grid-column: span 3;
+    padding: 0 10%;
+}
+
+.project-gallery{
+    width: 85%;
+}
+
+.project-gallery>a>img{
+    position: relative;
+    display: inline-block;
+    top: 100px;
+    border-radius: 1em;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-left: 60px;
+    opacity: 0.3;
+    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 0.75s;
+    border: 2px solid yellow;
+}
+
+.project-gallery>a>img:hover{
+    opacity: 1;
+}
+
+footer {
+    width: 100%;
+    height: 5%;
+    background-color: black;
+    color: yellow;
+    position: relative;
+    text-align: center;
+}
+
+.contacts{
+    width: 100%;
+    height: 3vw;
+    overflow: hidden;
+    margin-left: -11vw;
+}
+
+.contacts>p{
+    display: inline-block;
+    position: absolute;
+    margin-top: 7px;
+    font-size: 2vw;
+}
+
+.contacts>img{
+    margin-top: 10px;
+    width: 2vw;
+    margin-left: 15vw;
+    margin-right: 10px;
+}
+
+.scroller {
+    height: 25pt;
+    line-height: 35pt;
+    position: relative;
+    overflow: hidden;
+}
+
+.scroller>span {
+    position: relative;
+    animation: slide 6s infinite;
+    font-weight: thin;
+    font-size: 25pt;
+}
+
+@keyframes slide {
+    0% {
+        top: -4pt;
+    }
+
+    40% {
+        top: -43pt;
+    }
+
+    80% {
+        top: -81pt;
+    }
+
+    100% {
+        top: -4pt;
+    }
+}
+
+:target {
+    animation: targetted 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) normal;
+}
+
+@keyframes targetted {
+    33% {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-color: green;
+    }
+}
+
+.item:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: green;
+}
+
+@media only screen and (max-width: 1250px) {
+    * {
+        font-size: 13pt;
+    }
+
+    .navLinks {
+        margin-top: 21px;
+    }
+
+    .navLinks>a {
+        font-size: 18pt;
+    }
+
+    .navLinks>a:hover::after {
+        transform: scale(0.9);
+    }
+
+    .navLinks>a::after {
+        margin-left: -37.5px;
+    }
+
+    .navLinks>a:nth-of-type(2)::after {
+        margin-left: -49px;
+    }
+
+    .navLinks>a:nth-of-type(3)::after {
+        margin-left: -100px;
+    }
+
+    .navLinks>a:nth-of-type(4)::after {
+        margin-left: -69px;
+    }
+
+    .navLinks>a:nth-of-type(5)::after {
+        margin-left: -44px;
+    }
+
+    .intro {
+        top: 225px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    * {
+        font-size: 9.3pt;
+    }
+
+    .navLinks {
+        margin-top: 22px;
+    }
+
+    .navLinks>a {
+        font-size: 15pt;
+    }
+
+    .navLinks>a:hover::after {
+        transform: scale(0.75);
+    }
+
+    .navLinks>a::after {
+        margin-left: -35px;
+    }
+
+    .navLinks>a:nth-of-type(2)::after {
+        margin-left: -45px;
+    }
+
+    .navLinks>a:nth-of-type(3)::after {
+        margin-left: -92px;
+    }
+
+    .navLinks>a:nth-of-type(4)::after {
+        margin-left: -64px;
+    }
+
+    .navLinks>a:nth-of-type(5)::after {
+        margin-left: -40px;
+    }
+
+    .intro {
+        top: 125px;
+    }
+
+    #introVid {
+        width: 150%;
+    }
+
+    .info-bg {
+        margin-top: 60%;
+    }
+
+    .title {
+        font-size: 18pt;
+    }
+}
