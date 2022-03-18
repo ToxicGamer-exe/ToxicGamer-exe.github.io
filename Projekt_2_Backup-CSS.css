@@ -126,7 +126,7 @@ header>p::first-line, .navLinks>a {
     margin-top: 40%;
     width: 100%;
     /* background-color: black; */
-    background-image: url("../Projekt_1/Images/Binary_dark.jpg");
+    background-image: url("Images/Binary_dark.jpg");
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 30%);
@@ -309,11 +309,11 @@ footer {
     }
 
     .navLinks {
-        margin-top: 22px;
+        margin-top: 25px;
     }
 
     .navLinks>a {
-        font-size: 15pt;
+        font-size: 14pt;
     }
 
     .navLinks>a:hover::after {
