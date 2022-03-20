@@ -1,523 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Smooch+Sans:wght@100&display=swap');
-
-html {
-    scroll-behavior: smooth;
-}
-
-* {
-    font-family: 'Smooch Sans', sans-serif;
-    font-size: 15pt;
-    /* margin-left: -0.25px;
-    margin-top: -0.25px; */
-}
-
-body {
-    /* width: calc(100vw - 17px); */
-    margin: 0;
-    box-sizing: border-box;
-    background-color: black;
-}
-
-header {
-    top: 0;
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    background-color: black;
-    color: white;
-    text-align: right;
-    display: block;
-    overflow: hidden;
-    align-items: center;
-}
-
-header>p {
-    text-align: center;
-    font-size: 10pt;
-    position: absolute;
-    left: 1%;
-}
-
-.navLinks {
-    float: right;
-    margin-top: 20px;
-    margin-right: 1%;
-}
-
-header>p::first-line, .navLinks>a {
-    font-size: 20pt;
-    color: yellow
-}
-
-.navLinks>a {
-    /* position: absolute;
-        display: contents;     */
-    text-decoration: none;
-    margin-left: 10px;
-}
-
-.navLinks>a::before {
-    margin-right: 10px;
-    content: '|';
-}
-
-.navLinks>a:first-of-type::before {
-    content: '';
-}
-
-.navLinks>a::after {
-    content: '';
-    position: absolute;
-    bottom: 22%;
-    width: 40px;
-    margin-left: -39px;
-    height: 1%;
-    background-color: grey;
-    transition: transform 300ms;
-    transform: scale(0);
-    transform-origin: center;
-}
-
-.navLinks>a:hover::after {
-    transform: scale(1);
-}
-
-.navLinks>a:nth-of-type(2)::after {
-    width: 51.5px;
-    margin-left: -51.5px;
-}
-
-.navLinks>a:nth-of-type(3)::after {
-    width: 105px;
-    margin-left: -105px;
-}
-
-.navLinks>a:nth-of-type(4)::after {
-    width: 73px;
-    margin-left: -73px;
-}
-
-.navLinks>a:nth-of-type(5)::after {
-    width: 46px;
-    margin-left: -46px;
-}
-
-.intro {
-    /* background-image: url("/Images/intro.mp4"); */
-    text-align: center;
-    left: auto;
-    right: auto;
-    top: 300px;
-    position: relative;
-    color: white;
-    background-color: transparent;
-    font-size: 50pt;
-    font-weight: 700;
-}
-
-#introVid {
-    position: fixed;
-    /* min-width: 100%; */
-    /* min-height: 100%; */
-    /* width: 1600px; */
-    width: 100%;
-}
-
-.info-bg {
-    margin-top: 40%;
-    width: 100%;
-    /* background-color: black; */
-    background-image: url("Images/Binary_dark.jpg");
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    grid-template-rows: 110px 603px;
-    gap: 10px;
-    padding: 5px 0px;
-    justify-content: center;
-}
-
-.item {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.3);
-    border: 2px solid;
-    border-radius: 1em;
-    color: white;
-    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-    padding: 1% 5%;
-    overflow: hidden;
-}
-
-.title {
-    font-size: 25pt;
-    color: yellow;
-}
-
-.item>img {
-    width: 50%;
-}
-
-.general-info {
-    grid-column: span 3;
-    padding: 0 10%;
-}
-
-.project-gallery {
-    width: 25%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 675px;
-}
-
-.project-gallery>a{
-    height: 0px;
-}
-
-.project-gallery>a>img {
-    position: relative;
-    display: inline-block;
-    border-radius: 1em;
-    width: 10vw;
-    height: 100px;
-    bottom: 100px;
-    /* left: -7%; */
-    object-fit: cover;
-    margin-left: 10px;
-    opacity: 0.3;
-    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 0.75s;
-    border: 2px solid yellow;
-}
-
-.project-gallery>a>img:hover {
-    opacity: 1;
-}
-
-footer {
-    width: 100%;
-    background-color: black;
-    color: yellow;
-    position: relative;
-    text-align: center;
-}
-
-.contacts {
-    width: 100%;
-    height: 3vw;
-    overflow: hidden;
-    margin-left: -11vw;
-}
-
-.contacts>p {
-    display: inline-block;
-    position: absolute;
-    margin-top: 7px;
-    font-size: 2vw;
-}
-
-.contacts>img {
-    margin-top: 10px;
-    width: 2vw;
-    margin-left: 15vw;
-    margin-right: 10px;
-}
-
-.scroller {
-    height: 25pt;
-    line-height: 35pt;
-    position: relative;
-    overflow: hidden;
-}
-
-.scroller>span {
-    position: relative;
-    animation: slide 6s infinite;
-    font-weight: thin;
-    font-size: 25pt;
-}
-
-@keyframes slide {
-    0% {
-        top: -4pt;
-    }
-
-    40% {
-        top: -43pt;
-    }
-
-    80% {
-        top: -81pt;
-    }
-
-    100% {
-        top: -4pt;
-    }
-}
-
-:target {
-    animation: targetted 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) normal;
-}
-
-@keyframes targetted {
-    33% {
-        background-color: rgba(0, 0, 0, 0.3);
-        border-color: green;
-    }
-}
-
-.item:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-color: green;
-}
-
-@media only screen and (max-width: 1250px) {
-    * {
-        font-size: 12pt;
-    }
-
-    .navLinks {
-        margin-top: 21px;
-    }
-
-    .navLinks>a {
-        font-size: 18pt;
-    }
-
-    .navLinks>a:hover::after {
-        transform: scale(0.9);
-    }
-
-    .navLinks>a::after {
-        margin-left: -37.5px;
-    }
-
-    .navLinks>a:nth-of-type(2)::after {
-        margin-left: -49px;
-    }
-
-    .navLinks>a:nth-of-type(3)::after {
-        margin-left: -100px;
-    }
-
-    .navLinks>a:nth-of-type(4)::after {
-        margin-left: -69px;
-    }
-
-    .navLinks>a:nth-of-type(5)::after {
-        margin-left: -44px;
-    }
-
-    .intro {
-        top: 225px;
-    }
-
-    .project-gallery {
-        display: block;
-        top: 78%;
-        width: 15%;
-        margin: 0 4.5%;
-    }
-
-    .project-gallery>a>img {
-        width: 100%;
-    }
-    
-}
-
-@media only screen and (max-width: 750px) {
-    * {
-        font-size: 11pt;
-    }
-
-    .navLinks {
-        margin-top: 25px;
-    }
-
-    .navLinks>a {
-        font-size: 14pt;
-    }
-
-    .navLinks>a:hover::after {
-        transform: scale(0.75);
-    }
-
-    .navLinks>a::after {
-        margin-left: -33px;
-    }
-
-    .navLinks>a:nth-of-type(2)::after {
-        margin-left: -43px;
-    }
-
-    .navLinks>a:nth-of-type(3)::after {
-        margin-left: -90px;
-    }
-
-    .navLinks>a:nth-of-type(4)::after {
-        margin-left: -62px;
-    }
-
-    .navLinks>a:nth-of-type(5)::after {
-        margin-left: -38px;
-    }
-
-    .intro {
-        top: 125px;
-    }
-
-    #introVid {
-        width: 150%;
-    }
-
-    .info-bg {
-        margin-top: 60%;
-    }
-
-    .title {
-        font-size: 18pt;
-    }
-    
-    .project-gallery{
-        display: block;
-        top: 550px;
-    }
-
-    .project-gallery>a>img{
-        width: 100%;
-    }
-}
-
-@media only screen and (min-height: 1100px) {
-    * {
-        font-size: 15pt;
-    }
-
-    /* .intro{
-        height: 500px;
-    } */
-
-    .intro{
-        font-size: 70pt;
-        top: 300px;
-        margin-bottom: -10%;
-    }
-
-    #introVid{
-        width: 170%;
-    }
-
-    .info-bg {
-        margin-top: 70%;
-        display: grid;
-        grid-template-columns: 75%;
-        grid-template-rows: 10% repeat(3, 30%);
-        justify-content: center;
-        width: 100%;
-        padding: 5% 0;
-        height: 1600px;
-        /* display: block; */
-        /* background-size: cover; */
-        /* background-attachment: fixed;
-        justify-content: center; */
-    }
-
-    .item {
-        display: grid;
-        grid-template-columns: 30% 65%;
-        grid-template-rows: 25% 55%;
-        justify-content: center;
-        /* padding: 0; */
-    }
-
-    .general-info {
-        grid-column: 1;
-        display: inline-block;
-    }
-
-    .item>img{
-        /* width: 12vw;*/
-        margin-top: 10%;
-        width: 15vw;
-        height: 100%;
-        grid-column: 1;
-        grid-row: span 2;
-        vertical-align: center;
-    }
-
-    .item>span{
-        grid-row: 1;
-        grid-column: 2;
-        font-size: 150%;
-    }
-
-    .title{
-        font-size: 200%;
-    }
-
-    .project-gallery{
-        grid-column: 2;
-        grid-row: 2;
-        position: relative;
-        display: flex;
-        left: 37.5%;
-        top: 300px;
-        width: 20%;
-    }
-
-    .project-gallery>a>img{
-        width: 20vw;
-        height: 125px;
-    }
-
-    /* .item {
-        padding-top: 5%;
-        font-size: 2.5vw;
-    }
-
-    .item:nth-of-type(1){
-        padding-top: 0%;
-    }
-
-    .item>img {
-        width: 40%;
-        float: left;
-        margin-bottom: 25%;
-        margin-top: 7.5%;
-        padding-right: 5%;
-    }
-
-    .general-info {
-        grid-column: 1;
-    }
-
-    .item {
-        height: 500px;
-        width: 50%;
-        font-size: 20pt;
-    }
-
-    .title {
-        font-size: 4vw;
-    }
-
-    .project-gallery {
-        position: absolute;
-        display: flex;
-        margin-left: 30%;
-        margin-top: 40%;
-        width: 35%;
-    }
-
-    .item:nth-of-type(3)>.project-gallery {
-        margin-top: 85%;
-    }
-
-    .item:nth-of-type(4)>.project-gallery {
-        margin-top: 131%;
-    }
-
-    .project-gallery>a>img {
-        height: 100%;
-        width: 100%;
-    } */
-}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Michael Heinrich</title>
+    <link href="Projekt_2_Backup-CSS.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="intro"></div>
+    <video autoplay muted loop id="introVid" src="Images/intro_2.mp4" alt="MainBG"></video>
+
+    <div class="intro">
+        Vše na jednom místě!<br>
+        <div class="scroller">
+            <span>
+                Je libo programátor?<br>
+                Nebo web-developer?<br>
+                Či snad grafik?
+            </span>
+        </div>
+    </div>
+
+
+
+    <div class="info-bg">
+        <div class="item general-info" id="about">
+            <div class="title">Kdo jsem?</div>
+            <!-- Man... Idek what to type here... PeepoSad xD -->
+            Jsem nadšený student informatické školy DELTA v Pardubicích, kde studuji už druhým rokem. Jejím
+            prostřednictvím získávám spoustu praxí, jak už školou pořádanými informatickými kroužky, prácí na projektech
+            (přesně jako je tento), povinných praxích ve firmách nebo stážích v zahraničí.
+        </div>
+
+        <div class="item programmer" id="programmer">
+            <img src="Images/programmer-ico.svg" alt="ProgrammerIcon">
+            <span><div class="title">Programátor</div>
+            <!-- Some random and dumb shit here, just to show that this fucking grid doesn't work as it's supposed to. -->
+            Potřebujete-li někoho, kdo umí v C#, C++ nebo XAML, jsem tu vždy pro vás. Tuto práci asi dělám nejraději,
+            nejdéle a jsem do ní nejvíce zapálený (prakticky jsem byl těmito jazyky do oboru "přitažen").</span>
+            <div class="project-gallery">
+                <a href="Images/Programmer-project_1.png"><img src="Images/Programmer-project_1.png" alt="ProgrammerProject_1"></a>
+                <a href="Images/Programmer-project_2.png"><img src="Images/Programmer-project_2.png" alt="ProgrammerProject_2"></a>
+            </div>
+        </div>
+
+        <div class="item web-dev" id="web-dev">
+            <img src="Images/wev-dev-ico_2.svg" alt="WebDevIcon">
+            <span><div class="title">Web developer</div>
+            Chcete se nějak hezky prosadit a udělat dobrý první dojem na internetu? Nebojte se, mohu Vám pomoci. Mojí
+            vizitkou už by mohla být jen tato (i když jen single-page) stránka. Umím programovat v jazycích HTML, CSS,
+            JavaScript a Oracle APEX (základy pro webové stránky).</span>
+            <div class="project-gallery">
+                <a href="Images/Web-dev-project.png"><img src="Images/Web-dev-project.png" alt="WebDevProject_1"></a>
+                <a href="Images/Web-dev-project_2.png"><img src="Images/Web-dev-project_2.png" alt="WebDevProject_2"></a>
+            </div>
+        </div>
+
+        <div class="item graphic" id="graphic-designer">
+            <img src="Images/graphic-design-ico_2.svg" alt="GraphicDesignerIcon">
+            <span><div class="title">Grafik</div>
+            Chcete vytvořit nějaké logo, design, potisk, či snad upravit fotku, ale neumíte pracovat s programy, nebo si
+            nechcete zakupovat drahé licence? Přesně proto jsem tu já! Umím pracovat s programy Adobe Illustrator,
+            Photoshop, XD, Dimension a InDesign.</span>
+            <div class="project-gallery">
+                <a href="Images/Graphic-design-project.png"><img src="Images/Graphic-design-project.png" alt="GraphicDesignerProject_1" ></a>
+                <a href="Images/Graphic-design-project_2.png"><img src="Images/Graphic-design-project_2.png" alt="GraphicDesignerProject_2"></a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <p>Michael Heinrich<br>
+            student SŠIE DELTA</p>
+        <div class="navLinks">
+            <a href="#intro">Úvod</a>
+            <a href="#about">O mně</a>
+            <a href="#programmer">Programátor</a>
+            <a href="#web-dev">Web-Dev</a>
+            <a href="#graphic-designer">Grafik</a>
+        </div>
+    </header>
+
+    <footer>
+        Michael Heinrich | All rights reserved<br>
+        <div class="contacts">
+            <img src="Images/Phone-ico_2.jpg" alt="PhoneImage"> <p>123 465 789</p>
+            <img src="Images/email-envelope-ico.svg" alt="EmailImage"> <p>michael.heinrich@example.cz</p>
+        </div>
+    </footer>
+</body>
+
+</html>
