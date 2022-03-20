@@ -271,7 +271,7 @@ footer {
     border-color: green;
 }
 
-@media only screen and (mfoo-width: 1250px) {
+@media only screen and (max-width: 1250px) {
     * {
         font-size: 11.5pt;
     }
@@ -316,7 +316,7 @@ footer {
         display: block;
         top: 80%;
         width: 15%;
-        margin: 0 5%;
+        margin: 0 4.5%;
     }
 
     .project-gallery>a>img {
@@ -326,7 +326,7 @@ footer {
 
 @media only screen and (max-width: 750px) {
     * {
-        font-size: 9.3pt;
+        font-size: 10pt;
     }
 
     .navLinks {
@@ -342,23 +342,23 @@ footer {
     }
 
     .navLinks>a::after {
-        margin-left: -35px;
+        margin-left: -33px;
     }
 
     .navLinks>a:nth-of-type(2)::after {
-        margin-left: -45px;
+        margin-left: -43px;
     }
 
     .navLinks>a:nth-of-type(3)::after {
-        margin-left: -92px;
+        margin-left: -90px;
     }
 
     .navLinks>a:nth-of-type(4)::after {
-        margin-left: -64px;
+        margin-left: -62px;
     }
 
     .navLinks>a:nth-of-type(5)::after {
-        margin-left: -40px;
+        margin-left: -38px;
     }
 
     .intro {
@@ -376,6 +376,15 @@ footer {
     .title {
         font-size: 18pt;
     }
+    
+    .project-gallery{
+        display: block;
+        top: 500px;
+    }
+
+    .project-gallery>a>img{
+        width: 100%;
+    }
 }
 
 @media only screen and (min-height: 1100px) {
@@ -388,11 +397,13 @@ footer {
     } */
 
     .intro{
-        height: 200px;
+        font-size: 70pt;
+        top: 300px;
+        margin-bottom: -10%;
     }
 
     #introVid{
-        width: 160%;
+        width: 170%;
     }
 
     .info-bg {
@@ -436,20 +447,26 @@ footer {
     .item>span{
         grid-row: 1;
         grid-column: 2;
-        font-size: 2vw;
+        font-size: 130%;
     }
 
     .title{
-        font-size: 3vw;
+        font-size: 175%;
     }
 
     .project-gallery{
         grid-column: 2;
         grid-row: 2;
         position: relative;
+        display: flex;
         left: 40%;
         top: 250px;
         width: 15%;
+    }
+
+    .project-gallery>a>img{
+        width: 18vw;
+        height: 3.5vh;
     }
 
     /* .item {
