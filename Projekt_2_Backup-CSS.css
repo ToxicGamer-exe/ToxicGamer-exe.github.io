@@ -195,7 +195,6 @@ header>p::first-line, .navLinks>a {
 
 footer {
     width: 100%;
-    height: 5%;
     background-color: black;
     color: yellow;
     position: relative;
@@ -273,7 +272,7 @@ footer {
 
 @media only screen and (max-width: 1250px) {
     * {
-        font-size: 11.5pt;
+        font-size: 12pt;
     }
 
     .navLinks {
@@ -314,7 +313,7 @@ footer {
 
     .project-gallery {
         display: block;
-        top: 80%;
+        top: 78%;
         width: 15%;
         margin: 0 4.5%;
     }
@@ -322,6 +321,7 @@ footer {
     .project-gallery>a>img {
         width: 100%;
     }
+    
 }
 
 @media only screen and (max-width: 750px) {
@@ -379,7 +379,7 @@ footer {
     
     .project-gallery{
         display: block;
-        top: 500px;
+        top: 550px;
     }
 
     .project-gallery>a>img{
