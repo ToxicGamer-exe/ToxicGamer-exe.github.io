@@ -414,7 +414,7 @@ footer {
         justify-content: center;
         width: 100%;
         padding: 5% 0;
-        height: 1300px;
+        height: 1600px;
         /* display: block; */
         /* background-size: cover; */
         /* background-attachment: fixed;
@@ -447,11 +447,11 @@ footer {
     .item>span{
         grid-row: 1;
         grid-column: 2;
-        font-size: 130%;
+        font-size: 150%;
     }
 
     .title{
-        font-size: 175%;
+        font-size: 200%;
     }
 
     .project-gallery{
@@ -459,14 +459,14 @@ footer {
         grid-row: 2;
         position: relative;
         display: flex;
-        left: 40%;
-        top: 250px;
-        width: 15%;
+        left: 37.5%;
+        top: 350px;
+        width: 20%;
     }
 
     .project-gallery>a>img{
-        width: 18vw;
-        height: 3.5vh;
+        width: 20vw;
+        height: 4vh;
     }
 
     /* .item {
