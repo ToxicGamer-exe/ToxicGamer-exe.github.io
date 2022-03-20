@@ -131,7 +131,7 @@ header>p::first-line, .navLinks>a {
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 30%);
-    grid-template-rows: 100px 603px;
+    grid-template-rows: 110px 603px;
     gap: 10px;
     padding: 5px 0px;
     justify-content: center;
@@ -167,7 +167,7 @@ header>p::first-line, .navLinks>a {
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 650px;
+    top: 675px;
 }
 
 .project-gallery>a{
@@ -326,7 +326,7 @@ footer {
 
 @media only screen and (max-width: 750px) {
     * {
-        font-size: 10pt;
+        font-size: 11pt;
     }
 
     .navLinks {
@@ -460,13 +460,13 @@ footer {
         position: relative;
         display: flex;
         left: 37.5%;
-        top: 350px;
+        top: 300px;
         width: 20%;
     }
 
     .project-gallery>a>img{
         width: 20vw;
-        height: 4vh;
+        height: 125px;
     }
 
     /* .item {
