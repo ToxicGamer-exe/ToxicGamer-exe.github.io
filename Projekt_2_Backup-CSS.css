@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Smooch+Sans:wght@100&display=swap');
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -12,9 +12,10 @@ html{
 }
 
 body {
-    width: calc(100vw - 17px);
+    /* width: calc(100vw - 17px); */
     margin: 0;
     box-sizing: border-box;
+    background-color: black;
 }
 
 header {
@@ -161,25 +162,34 @@ header>p::first-line, .navLinks>a {
     padding: 0 10%;
 }
 
-.project-gallery{
-    width: 85%;
+.project-gallery {
+    width: 25%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 650px;
 }
 
-.project-gallery>a>img{
+.project-gallery>a{
+    height: 0px;
+}
+
+.project-gallery>a>img {
     position: relative;
     display: inline-block;
-    top: 100px;
     border-radius: 1em;
-    width: 100px;
+    width: 10vw;
     height: 100px;
+    bottom: 100px;
+    /* left: -7%; */
     object-fit: cover;
-    margin-left: 60px;
+    margin-left: 10px;
     opacity: 0.3;
     transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 0.75s;
     border: 2px solid yellow;
 }
 
-.project-gallery>a>img:hover{
+.project-gallery>a>img:hover {
     opacity: 1;
 }
 
@@ -192,21 +202,21 @@ footer {
     text-align: center;
 }
 
-.contacts{
+.contacts {
     width: 100%;
     height: 3vw;
     overflow: hidden;
     margin-left: -11vw;
 }
 
-.contacts>p{
+.contacts>p {
     display: inline-block;
     position: absolute;
     margin-top: 7px;
     font-size: 2vw;
 }
 
-.contacts>img{
+.contacts>img {
     margin-top: 10px;
     width: 2vw;
     margin-left: 15vw;
@@ -261,9 +271,9 @@ footer {
     border-color: green;
 }
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (mfoo-width: 1250px) {
     * {
-        font-size: 13pt;
+        font-size: 11.5pt;
     }
 
     .navLinks {
@@ -300,6 +310,17 @@ footer {
 
     .intro {
         top: 225px;
+    }
+
+    .project-gallery {
+        display: block;
+        top: 80%;
+        width: 15%;
+        margin: 0 5%;
+    }
+
+    .project-gallery>a>img {
+        width: 100%;
     }
 }
 
@@ -355,4 +376,131 @@ footer {
     .title {
         font-size: 18pt;
     }
+}
+
+@media only screen and (min-height: 1100px) {
+    * {
+        font-size: 15pt;
+    }
+
+    /* .intro{
+        height: 500px;
+    } */
+
+    .intro{
+        height: 200px;
+    }
+
+    #introVid{
+        width: 160%;
+    }
+
+    .info-bg {
+        margin-top: 70%;
+        display: grid;
+        grid-template-columns: 75%;
+        grid-template-rows: 10% repeat(3, 30%);
+        justify-content: center;
+        width: 100%;
+        padding: 5% 0;
+        height: 1300px;
+        /* display: block; */
+        /* background-size: cover; */
+        /* background-attachment: fixed;
+        justify-content: center; */
+    }
+
+    .item {
+        display: grid;
+        grid-template-columns: 30% 65%;
+        grid-template-rows: 25% 55%;
+        justify-content: center;
+        /* padding: 0; */
+    }
+
+    .general-info {
+        grid-column: 1;
+        display: inline-block;
+    }
+
+    .item>img{
+        /* width: 12vw;*/
+        margin-top: 10%;
+        width: 15vw;
+        height: 100%;
+        grid-column: 1;
+        grid-row: span 2;
+        vertical-align: center;
+    }
+
+    .item>span{
+        grid-row: 1;
+        grid-column: 2;
+        font-size: 2vw;
+    }
+
+    .title{
+        font-size: 3vw;
+    }
+
+    .project-gallery{
+        grid-column: 2;
+        grid-row: 2;
+        position: relative;
+        left: 40%;
+        top: 250px;
+        width: 15%;
+    }
+
+    /* .item {
+        padding-top: 5%;
+        font-size: 2.5vw;
+    }
+
+    .item:nth-of-type(1){
+        padding-top: 0%;
+    }
+
+    .item>img {
+        width: 40%;
+        float: left;
+        margin-bottom: 25%;
+        margin-top: 7.5%;
+        padding-right: 5%;
+    }
+
+    .general-info {
+        grid-column: 1;
+    }
+
+    .item {
+        height: 500px;
+        width: 50%;
+        font-size: 20pt;
+    }
+
+    .title {
+        font-size: 4vw;
+    }
+
+    .project-gallery {
+        position: absolute;
+        display: flex;
+        margin-left: 30%;
+        margin-top: 40%;
+        width: 35%;
+    }
+
+    .item:nth-of-type(3)>.project-gallery {
+        margin-top: 85%;
+    }
+
+    .item:nth-of-type(4)>.project-gallery {
+        margin-top: 131%;
+    }
+
+    .project-gallery>a>img {
+        height: 100%;
+        width: 100%;
+    } */
 }
